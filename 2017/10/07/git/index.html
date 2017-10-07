@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>git | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Git常用命令 命令行接口，一切都是在黑窗口中通过命令进行交互  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# (Print Working Directory) 查看当前目录$ pwd# (Change Directory) 切换目录，如 cd /etc#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://yoursite.com/2017/10/07/git/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Git常用命令 命令行接口，一切都是在黑窗口中通过命令进行交互  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# (Print Working Directory) 查看当前目录$ pwd# (Change Directory) 切换目录，如 cd /etc#">
+<meta property="og:updated_time" content="2017-10-07T12:42:28.708Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="Git常用命令 命令行接口，一切都是在黑窗口中通过命令进行交互  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# (Print Working Directory) 查看当前目录$ pwd# (Change Directory) 切换目录，如 cd /etc#">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/07/git/" class="article-date">
   <time datetime="2017-10-07T12:20:28.684Z" itemprop="datePublished">2017-10-07</time>
@@ -74,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/07/git/">git</a>
+    <h1 class="article-title" itemprop="name">
+      git
     </h1>
   
 
@@ -110,85 +112,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-blogCreate" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/07/blogCreate/" class="article-date">
-  <time datetime="2017-10-07T04:57:14.802Z" itemprop="datePublished">2017-10-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/07/blogCreate/">搭建个人博客</a>
-    </h1>
+    <a href="/2017/10/07/blogCreate/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">搭建个人博客</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><ul>
-<li>搭建个人博客,可以很方便的整理知识笔记,可以在上面写一些经历,分享一些学习笔记、技术以及教程等</li>
-<li>Hexo 部署</li>
-<li><a href="https://wanwang.aliyun.com/hosting/free?spm=5176.8060947.1001.2.3gO88j" target="_blank" rel="external">https://wanwang.aliyun.com/hosting/free?spm=5176.8060947.1001.2.3gO88j</a></li>
-</ul>
-<h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><ul>
-<li><p>第一步：安装node环境</p>
-<ul>
-<li>下载node: <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></li>
-</ul>
-</li>
-<li><p>第二步：安装 Hexo</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure>
-<ul>
-<li>第三步：初始化博客</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init blog</div></pre></td></tr></table></figure>
-<p>  该命令会联网下载一些文件，等待完成即可</p>
-<ul>
-<li>第四步：进入 blog 目录，执行</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd blog</div><div class="line">hexo server</div></pre></td></tr></table></figure>
-<h3 id="发布到GitHub上"><a href="#发布到GitHub上" class="headerlink" title="发布到GitHub上"></a>发布到GitHub上</h3><p>  把本地使用 Hexo 搭建出来的静态博客发布到 GitHub 上</p>
-<ul>
-<li>第一步，在 GitHub 中创建一个仓库，仓库的名字必须叫：你自己的github用户名.github.io</li>
-<li><p>第二步：把本地 hexo 生成的博客中找到 _config.yml 文件<br>在文件最后的 deploy 选项修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/lipengzhou/lipenghzou.github.io.git</div></pre></td></tr></table></figure>
-<p>然后把 repo 地址修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github用户名:github密码@github.com/lipengzhou/lipenghzou.github.io.git</div></pre></td></tr></table></figure>
-</li>
-<li><p>第三步，安装自动发布工具（以下命令的执行必须在你的博客目录下）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>第四步，执行以下命令开心的发布吧（在你的博客目录下执行）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/07/blogCreate/" data-id="cj8gwmhso0000qsv24xymyi97" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
