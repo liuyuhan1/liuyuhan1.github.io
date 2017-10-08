@@ -83,12 +83,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>GitHub 就是程序员的新浪微博。</p>
-<p>GitHub 不仅仅是用来作为 Git 仓库托管的，更多的是为编程加入了社交元素。</p>
-</blockquote>
-<p>GitHub 与 Git 的区别：</p>
-<ul>
+        <h3 id="GitHub-就是程序员的新浪微博。"><a href="#GitHub-就是程序员的新浪微博。" class="headerlink" title="GitHub 就是程序员的新浪微博。"></a>GitHub 就是程序员的新浪微博。</h3><h3 id="GitHub-不仅仅是用来作为-Git-仓库托管的，更多的是为编程加入了社交元素。"><a href="#GitHub-不仅仅是用来作为-Git-仓库托管的，更多的是为编程加入了社交元素。" class="headerlink" title="GitHub 不仅仅是用来作为 Git 仓库托管的，更多的是为编程加入了社交元素。"></a>GitHub 不仅仅是用来作为 Git 仓库托管的，更多的是为编程加入了社交元素。</h3><h3 id="GitHub-与-Git-的区别："><a href="#GitHub-与-Git-的区别：" class="headerlink" title="GitHub 与 Git 的区别："></a>GitHub 与 Git 的区别：</h3><ul>
 <li>Git 是源代码版本管理工具</li>
 <li>GitHub 是提供远程仓库托管的一个服务平台</li>
 </ul>
@@ -125,7 +120,7 @@
 <li>git push 地址别名 master</li>
 </ol>
 <p>由于这种方式每一次都需要通过 <code>git push 远程仓库地址别名 分支名称</code> 比较麻烦。</p>
-<p>所以为了省事儿，这里推荐执行：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git push --<span class="built_in">set</span>-upstream 远程仓库地址别名 分支名称</span></div></pre></td></tr></table></figure></p>
+<p>所以为了省事儿，这里推荐执行：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git push --set-upstream 远程仓库地址别名 分支名称</div></pre></td></tr></table></figure></p>
 <p>只要通过上面的命令执行过后，git 就记住了你 push 的远程仓库了。所以你以后再在这个仓库中 push 的时候就不需要每次都加上那个 远程仓库别名和分支名称了。</p>
 <h3 id="Pull-和-Push"><a href="#Pull-和-Push" class="headerlink" title="Pull 和 Push"></a>Pull 和 Push</h3><p>在每次 push 的时候，如果本地仓库的版本和远程仓库版本不一致了，git 是不允许 push 的。</p>
 <p>所以，这个时候，就必须在 push 之前先 pull 一下， 拉取最新版本（先确保把本地的版本和远程仓库的版本保持一致）。pull 下来之后，文件与文件之间有的会自动合并，有的会产生冲突（git 也不做这件事儿），所以你找到冲突的文件，找到提交和谁提交的这个版本的文件冲突了的人，两个人一起对比这个文件进行合并。手动合并(删除冲突文件格式)之后再 commit 这个合并之后的版本，然后再 push。</p>
@@ -134,9 +129,7 @@
 <li><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a></li>
 <li><a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html" target="_blank" rel="external">Git 工作流程</a></li>
 </ul>
-<h2 id="使用-Git-结合-GitHub-多人协作"><a href="#使用-Git-结合-GitHub-多人协作" class="headerlink" title="使用 Git 结合 GitHub 多人协作"></a>使用 Git 结合 GitHub 多人协作</h2><h3 id="Pull-Request"><a href="#Pull-Request" class="headerlink" title="Pull Request"></a>Pull Request</h3><blockquote>
-<p>专业一点应该具有Code Review这个环节，Pull Request 不仅能帮你实现协同，更多的是帮你把Code Review变得更加方便了</p>
-</blockquote>
+<h2 id="使用-Git-结合-GitHub-多人协作"><a href="#使用-Git-结合-GitHub-多人协作" class="headerlink" title="使用 Git 结合 GitHub 多人协作"></a>使用 Git 结合 GitHub 多人协作</h2><h3 id="Pull-Request"><a href="#Pull-Request" class="headerlink" title="Pull Request"></a>Pull Request</h3><p>专业一点应该具有Code Review这个环节，Pull Request 不仅能帮你实现协同，更多的是帮你把Code Review变得更加方便了</p>
 <p>其他成员如何协同：</p>
 <ol>
 <li>把源代码仓库 fork 到自己的账户下</li>
