@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/07/git/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="安装和配置 Git 环境安装 Git 下载地址：https://git-scm.com/downloads  初始化配置12345678# 设置用户名git config --global user.name &quot;你的名字&quot;# 配置用户邮箱git config --global user.email &quot;你的常用邮箱&quot;# 设置 gitk 图形查看工具中文显示默认编码（防止乱码）git config -">
-<meta property="og:updated_time" content="2017-10-07T13:32:49.642Z">
+<meta property="og:updated_time" content="2017-10-08T14:42:30.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="安装和配置 Git 环境安装 Git 下载地址：https://git-scm.com/downloads  初始化配置12345678# 设置用户名git config --global user.name &quot;你的名字&quot;# 配置用户邮箱git config --global user.email &quot;你的常用邮箱&quot;# 设置 gitk 图形查看工具中文显示默认编码（防止乱码）git config -">
@@ -104,10 +104,7 @@
 <li>当前工作目录</li>
 <li>用户目录</li>
 </ul>
-<h2 id="VI-visual-Interface-编辑器"><a href="#VI-visual-Interface-编辑器" class="headerlink" title="VI(visual Interface) 编辑器"></a>VI(visual Interface) 编辑器</h2><h3 id="VI-编译器的三种模式"><a href="#VI-编译器的三种模式" class="headerlink" title="VI 编译器的三种模式"></a>VI 编译器的三种模式</h3><p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
-<p>第一次进入 vi 编辑器不要直接编辑，默认停留在命令模式。你输入的任何字母都有其特定含义，例如 dd 用来删除光标停留的行。</p>
-<p>如果需要对文本进行编辑，则需要退出命令模式，进入编辑模式。使用命令：i 进入编辑模式。</p>
-<p>在任何模式下，按 ESC 都是直接进入命令模式。</p>
+<h2 id="VI-visual-Interface-编辑器"><a href="#VI-visual-Interface-编辑器" class="headerlink" title="VI(visual Interface) 编辑器"></a>VI(visual Interface) 编辑器</h2><h3 id="VI-编译器的三种模式"><a href="#VI-编译器的三种模式" class="headerlink" title="VI 编译器的三种模式"></a>VI 编译器的三种模式</h3><p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。<br>第一次进入 vi 编辑器不要直接编辑，默认停留在命令模式。你输入的任何字母都有其特定含义，例如 dd 用来删除光标停留的行。<br>如果需要对文本进行编辑，则需要退出命令模式，进入编辑模式。使用命令：i 进入编辑模式。<br>在任何模式下，按 ESC 都是直接进入命令模式。</p>
 <p>如果需要对文件进行：保存、退出、等操作。则需要在命令模式下输入：</p>
 <ul>
 <li><code>:w</code> 保存</li>
@@ -134,9 +131,7 @@
 <li>仓库区</li>
 <li>远程仓库</li>
 </ul>
-<p>默认修改的文件改动的都是工作区中的代码。</p>
-<p>暂存区是一个临时存储的空间。</p>
-<p>本地仓库就是真正的用来存储你的历史版本。</p>
+<p>默认修改的文件改动的都是工作区中的代码。<br>暂存区是一个临时存储的空间。<br>本地仓库就是真正的用来存储你的历史版本。</p>
 <h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><p>先搞定历史记录问题，然后再看如何多人协作。</p>
 <ol>
 <li>配置用户信息</li>
@@ -174,25 +169,20 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.email <span class="string">"你的邮箱"</span></div><div class="line">$ git config --global user.name <span class="string">"你的名字"</span></div><div class="line"></div><div class="line"><span class="comment"># 如果想要修改，则重新执行该命令即可。</span></div></pre></td></tr></table></figure>
 <p>只要通过以上的配置之后，你每次 <code>commit</code> 的时候就都会使用你配置的那个用户信息。</p>
 <ol>
-<li><p>配置用户信息</p>
-</li>
-<li><p>初始化仓库</p>
-</li>
+<li>配置用户信息</li>
+<li>初始化仓库</li>
 </ol>
-<p>你的所有的 git 相关操作都需要具备一个 git 仓库。<br>所以如果你的项目需要被 git 管理，则就必须在你的项目中使用 <code>git init</code> 初始化这个仓库。</p>
-<p class="tip"><br>  由于是管理整个项目，所以一定要在项目的根目录初始化。<br></p>
-
+<p>你的所有的 git 相关操作都需要具备一个 git 仓库。<br>所以如果你的项目需要被 git 管理，则就必须在你的项目中使用 <code>git init</code> 初始化这个仓库。<br>由于是管理整个项目，所以一定要在项目的根目录初始化。</p>
 <ol>
 <li>添加文件到暂存区</li>
 </ol>
-<p>不能直接把工作区中的文件直接提交到本地仓库，必须先进入暂存区。</p>
-<p>暂存区存在的意义：</p>
+<p>不能直接把工作区中的文件直接提交到本地仓库，必须先进入暂存区。<br>暂存区存在的意义：</p>
 <ul>
 <li>临时备份</li>
-<li><p>分批次提交</p>
-</li>
-<li><p>git add 文件名/目录</p>
-</li>
+<li>分批次提交</li>
+</ul>
+<ul>
+<li>git add 文件名/目录</li>
 <li>也可以多次执行 git add 添加多个文件/目录 到暂存区</li>
 <li>git add * 提交所有的文件到暂存区</li>
 <li>git add –all 提交所有的文件到暂存区</li>
@@ -201,18 +191,12 @@
 <li>提交暂存区中的文件形成历史记录</li>
 </ol>
 <ul>
-<li>git commit -m ‘提交日志’</li>
+<li>git commit -m ‘提交日志’<br><code>git commit</code> 的作用就是把暂存区中的内容作为一个版本记录保存到本地仓库，形成历史记录。<br>保存完毕，暂存区中的文件被清空。</li>
 </ul>
-<p><code>git commit</code> 的作用就是把暂存区中的内容作为一个版本记录保存到本地仓库，形成历史记录。<br>保存完毕，暂存区中的文件被清空。</p>
 <ol>
-<li>查看仓库中文件状态</li>
-</ol>
+<li><p>查看仓库中文件状态</p>
 <ul>
-<li>工作区</li>
-<li><p>暂存区</p>
-</li>
-<li><p>Untracked</p>
-<ul>
+<li>Untracked<ul>
 <li>未被 git 管理跟踪的文件，一次历史记录都没有，一次暂存区都没进入</li>
 </ul>
 </li>
@@ -229,8 +213,9 @@
 </ul>
 </li>
 </ul>
-<ol>
-<li>查看提交历史</li>
+</li>
+<li><p>查看提交历史</p>
+</li>
 </ol>
 <ul>
 <li>git log</li>
@@ -251,13 +236,29 @@
 <ul>
 <li>GitHub</li>
 <li>bitbuccket</li>
-</ul>
-<ul>
 <li>开源中国：码云</li>
 <li>coding</li>
 <li>git remote 命令用来管理远程仓库地址</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 下载远程仓库的所有变动</span></div><div class="line"><span class="meta">$</span><span class="bash"> git fetch [remote]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 显示所有远程仓库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git remote -v</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 显示某个远程仓库的信息</span></div><div class="line"><span class="meta">$</span><span class="bash"> git remote show [remote]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 增加一个新的远程仓库，并命名</span></div><div class="line"><span class="meta">$</span><span class="bash"> git remote add [shortname] [url]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 取回远程仓库的变化，并与本地分支合并</span></div><div class="line"><span class="meta">$</span><span class="bash"> git pull [remote] [branch]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 上传本地指定分支到远程仓库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push [remote] [branch]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 强行推送当前分支到远程仓库，即使有冲突</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push [remote] --force</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 推送所有分支到远程仓库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push [remote] --all</span></div></pre></td></tr></table></figure>
+<h3 id="已有远程仓库"><a href="#已有远程仓库" class="headerlink" title="已有远程仓库"></a>已有远程仓库</h3><ul>
+<li>git clone 远程仓库地址<ul>
+<li>git clone 下来的仓库自动在 remote 中添加了一个名字为 origin 的仓库地址信息</li>
+</ul>
+</li>
+<li>git push 推送</li>
+<li>git pull 拉取<br>这种方式拿到的仓库，自动记录了远程仓库的地址，所以你每次 push 和 pull 的时候它都知道往哪儿 push 和 pull</li>
+</ul>
+<h3 id="已有本地仓库，需要推送到远程仓库"><a href="#已有本地仓库，需要推送到远程仓库" class="headerlink" title="已有本地仓库，需要推送到远程仓库"></a>已有本地仓库，需要推送到远程仓库</h3><ul>
+<li>现在云端创建一个远程仓库</li>
+<li>git push 远程仓库地址<br>如果每一次 push 的时候都手动的拼写远程仓库地址很麻烦，所以这里使用 <code>remote</code> 命令把远程仓库记录起来</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># git remote 就是用来管理远程仓库地址的</span></div><div class="line"><span class="comment"># 一个项目可以存储在任何地方，既可以放到 GitHub 也可以同时放到码云</span></div><div class="line">$ git remote add 别名（推荐使用origin） 远程仓库地址</div></pre></td></tr></table></figure>
+<ul>
+<li>git push 仓库地址别名 本地分支:远程分支</li>
+<li>git push 仓库地址 分支名称</li>
+<li>git push –set-upstream 远程仓库 分支</li>
+</ul>
 <h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="gitignore-忽略项配置文件"><a href="#gitignore-忽略项配置文件" class="headerlink" title=".gitignore 忽略项配置文件"></a>.gitignore 忽略项配置文件</h3><h3 id="git-config-配置"><a href="#git-config-配置" class="headerlink" title="git config 配置"></a>git config 配置</h3><h3 id="Git-记录账户信息问题"><a href="#Git-记录账户信息问题" class="headerlink" title="Git 记录账户信息问题"></a>Git 记录账户信息问题</h3><ul>
 <li>默认 Git 会记录你第一次登陆的用户名密码凭据</li>
 <li>如果想要在自己的本机切换多个账户，要记得去 Windows 的 凭据管理器 中删除 Git 记录的那个账户信息<ul>
@@ -278,6 +279,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/10/07/GitHub/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          GitHub
+        
+      </div>
+    </a>
   
   
     <a href="/2017/10/07/blogCreate/" id="article-nav-older" class="article-nav-link-wrap">
@@ -317,6 +327,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/10/07/GitHub/">GitHub</a>
+          </li>
         
           <li>
             <a href="/2017/10/07/git/">Git</a>
